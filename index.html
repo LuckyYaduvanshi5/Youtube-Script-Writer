@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium YouTube Script Generator | Powered by Miniai</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Add Marked.js library for Markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="app-header">
+      <h1><i class="fab fa-youtube"></i> Premium Script Generator</h1>
+    <p class="tagline">Craft Engaging YouTube Scripts Instantly with AI Power</p>
+  </header>
+    
+  <main class="content-wrapper">
+    <form id="scriptForm">
+      <div class="input-group">
+        <label for="token">
+          <i class="fas fa-key"></i> GitHub Personal Access Token:
+          <span class="tooltip" data-tooltip="Your GitHub token is securely used to access the script generation API. It is not stored.">
+            <i class="fas fa-info-circle"></i>
+          </span>
+        </label>
+        <input type="password" id="token" name="token" required placeholder="Enter your GitHub PAT">
+      </div>
+
+      <div class="input-group">
+        <label for="topic">
+          <i class="fas fa-lightbulb"></i> Script Topic:
+        </label>
+        <textarea id="topic" name="topic" rows="4" required placeholder="e.g., 'How to Start Freelancing Without Skills', 'Best AI Apps for Content Creators'" maxlength="300"></textarea>
+        <div id="topicCharCount" class="character-count">0 / 300</div>
+      </div>
+      
+      <div class="action-area">
+        <button type="submit" id="generateBtn">
+          <i class="fas fa-magic"></i> Generate Script
+        </button>
+      </div>
+    </form>
+    
+    <div id="loading" style="display: none;">
+      <i class="fas fa-spinner fa-spin"></i> Generating your awesome script...
+    </div>
+    
+    <div id="scriptResult" class="script-content" style="display: none;">
+      <h2>Generated Script:</h2>
+      <!-- Change output area to a div for rendered HTML -->
+      <div id="scriptOutputHtml" class="output-html-content"></div> 
+      <div class="action-area result-actions"> <!-- Added class for styling -->
+        <button id="copyBtn" style="display: none;">
+          <i class="fas fa-copy"></i> Copy Raw Script
+        </button>
+        <!-- Add Export to Docs button -->
+        <button id="exportDocsBtn" style="display: none;">
+            <i class="fas fa-file-word"></i> Export to Docs
+        </button>
+      </div>
+    </div>
+  </main>
+    
+    <footer class="app-footer">
+    <img src="logominiai.png" alt="Miniai Logo" class="footer-logo">
+    <p>&copy; 2025 <a href="https://miniai.online" target="_blank" rel="noopener noreferrer" class="footer-link">Miniai.online</a>. All Rights Reserved. Powered by CHATGPT-4.5 </p>
+    </footer>
+
+  <div id="notification" class="notification">
+    <div class="notification-content">
+      <i id="notificationIcon" class="fas"></i>
+      <span id="notificationMessage"></span>
+    </div>
+    <button class="close-btn" onclick="hideNotification()">&times;</button>
+  </div>
+
+  <!-- Add FileSaver.js and html-to-docx-buffer for export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="https://unpkg.com/html-to-docx-buffer@1.6.0/dist/html-to-docx.umd.js"></script> 
+  
+  <script src="ui_handler.js"></script>
+</body>
+</html>
