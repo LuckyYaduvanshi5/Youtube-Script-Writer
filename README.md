@@ -1,4 +1,4 @@
-# ![Miniai Logo](logominiai.png) Premium YouTube Script Generator <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Film%20Projector.png" alt="Film Projector" width="35" height="35" />
+# ![Miniai Logo](logominiaii.png) Premium YouTube Script Generator <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Film%20Projector.png" alt="Film Projector" width="35" height="35" />
 
 Generate engaging, SEO-optimized YouTube scripts effortlessly using the power of advanced AI, tailored to a personal, motivational, and relatable style!
 
